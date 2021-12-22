@@ -27,13 +27,6 @@ export default function ImagePreview() {
             {!isUpload ? (
               <>
                 <label htmlFor='upload-input'>
-                  {/* <img
-                    src={folder}
-                    draggable={'false'}
-                    alt='placeholder'
-                    style={{ width: '5rem' }}
-                  /> */}
-                  <a href='#'>Upload</a>
                   <p style={{ color: '#444' }}>Click to upload your image</p>
                 </label>
                 <input
@@ -45,7 +38,7 @@ export default function ImagePreview() {
               </>
             ) : (
               <div className={styles.ImagePreview}>
-                {/* <img
+                <img
                   className={styles.closeIcon}
                   src={close}
                   alt='close'
@@ -53,16 +46,8 @@ export default function ImagePreview() {
                     setIsUpload(false);
                     setImage(null);
                   }}
-                /> */}
-                <img
-                  id={styles.uploadedImage}
-                  src={image}
-                  alt='uploaded-img'
-                  onClick={() => {
-                    setIsUpload(false);
-                    setImage(null);
-                  }}
                 />
+                <img id={styles.uploadedImage} src={image} alt='uploaded-img' />
               </div>
             )}
           </div>
